@@ -1,6 +1,6 @@
-using Training_Management_System.Repositories.Implementation;
 using Microsoft.EntityFrameworkCore;
 using Training_Management_System.Data;
+using Training_Management_System.Repositories.Implementation;
 
 namespace Training_Management_System
 {
@@ -16,6 +16,7 @@ namespace Training_Management_System
              options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<SessionRepository>();
+            builder.Services.AddScoped<UserRepository>();
 
             var app = builder.Build();
 

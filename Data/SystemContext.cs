@@ -19,20 +19,20 @@ namespace Training_Management_System.Data
             modelBuilder.ApplyConfiguration(new GradeConfiguration());
 
             modelBuilder.Entity<User>().HasData(
-                new User { id=1, Name="Mohamed Adel",Email="mohamed@gmail.com",Role="instructor"},
-                new User { id=2,Name="Moheb",Email="Moheb@gmail.com",Role="Trainer"},
-                new User { id=3,Name="Omar",Email="Omar@gmail.com",Role="instructor"}
+                new User { id = 1, Name = "Mohamed Adel", Email = "mohamed@gmail.com", Role = "instructor" },
+                new User { id = 2, Name = "Moheb", Email = "Moheb@gmail.com", Role = "Trainer" },
+                new User { id = 3, Name = "Omar", Email = "Omar@gmail.com", Role = "instructor" }
                 );
             modelBuilder.Entity<Course>().HasData(
-                new Course {id=1, Name="ASP MVC" ,Category=CourseCategory.Programming,instructorid=1 },
-                new Course { id=2,Name="Biochemistry",Category=CourseCategory.Chemistry,instructorid=3}
+                new Course { id = 1, Name = "ASP MVC", Category = CourseCategory.Programming, instructorid = 1 },
+                new Course { id = 2, Name = "Biochemistry", Category = CourseCategory.Chemistry, instructorid = 3 }
                 );
             modelBuilder.Entity<Session>().HasData(
-                new Session {id = 1, StartDate=new DateTime(2025,8,16),EndDate=new DateTime(2025,8,20),courseid=1 },
-                new Session { id=2 ,StartDate=new DateTime(2025,8,15),EndDate=new DateTime(2025,8,21),courseid=2}
+                new Session { id = 1, StartDate = new DateTime(2025, 8, 16), EndDate = new DateTime(2025, 8, 20), courseid = 1 },
+                new Session { id = 2, StartDate = new DateTime(2025, 8, 15), EndDate = new DateTime(2025, 8, 21), courseid = 2 }
                 );
             modelBuilder.Entity<Grade>().HasData(
-                new Grade { id =1,Sessionid=1,Traineeid=2,Value=90}
+                new Grade { id = 1, Sessionid = 1, Traineeid = 2, Value = 90 }
                 );
         }
     }
